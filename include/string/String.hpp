@@ -9,29 +9,27 @@ namespace the_cookie_lib {
 			char *data{};
 			string_len len{};
 		public:
-			String();
-			~String();
-			String(char *string);
-			String(String& string);
+			[[maybe_unused]] String();
+			[[maybe_unused]] ~String();
+			[[maybe_unused]] String(char *string);
+			[[maybe_unused]] String(String& string);
 		public:
-			String* operator+(String& left_part);
-			String* operator&(String& left_part);
-			String& operator=(String left_part);
-			String& operator=(const String& left_part);
-			String& operator=(String&& left_part) noexcept;
-			bool operator<(String& left_part) const;
-			bool operator>(String& left_part) const;
-			String* operator+=(String& left_part);
-			String* operator&=(String& left_part);
-			bool operator==(String& left_part);
-			bool operator!=(String& left_part);
-			char operator[](int left_part);
-			char operator[](string_len left_part);
+			[[maybe_unused]] String* operator+(String& left_part);
+			[[maybe_unused]] String* operator&(String& left_part);
+			[[maybe_unused]] String& operator=(String left_part);
+			[[maybe_unused]] String& operator=(const String& left_part);
+			[[maybe_unused]] String& operator=(String&& left_part) noexcept;
+			[[maybe_unused]] bool operator<(String& left_part) const;
+			[[maybe_unused]] bool operator>(String& left_part) const;
+			[[maybe_unused]] String* operator+=(String& left_part);
+			[[maybe_unused]] String* operator&=(String& left_part);
+			[[maybe_unused]] bool operator==(String& left_part);
+			[[maybe_unused]] bool operator!=(String& left_part);
+			[[maybe_unused]] char operator[](int left_part);
+			[[maybe_unused]] char operator[](string_len left_part);
 	};
-
-	string_len strlen(String& string);
-	string_len strlen(const char* string);
 }
 
+#include <StrLen.hpp>
 
 #endif //THE_COOKIE_LIB_STRING_HPP
