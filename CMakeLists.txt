@@ -14,7 +14,10 @@ list(APPEND vector_utils)
 
 list(APPEND matrix_utils)
 
-add_library(the_cookie_lib ${string_utils})
+add_library(the_cookie_lib ${string_utils} ${memory_utils}
+        include/memory/MemDup.hpp
+        include/string/StrLen.hpp
+        include/memory/Memory.hpp)
 
 set_target_properties(the_cookie_lib PROPERTIES PREFIX "")
 set_target_properties(the_cookie_lib PROPERTIES OUTPUT_NAME "the_cookie_lib")
